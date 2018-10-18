@@ -1,0 +1,38 @@
+
+---
+
+Overview:
+- this jar can be used to delete all the undeployed revision in an environment. The undeployed revision which is below the deployed revision will be retained. Not all the undeployed revisions will be deleted. 
+- the environment is used to retrieve all the proxy names 
+- irrespective of which evironment the revisions are delpoyed, this code retains the revision and a undeployed revision below it. 
+
+---
+
+input arguments
+the arguments which needs to be parsed to this jar are:
+
+	username 
+	password
+	domain name
+	organization name
+	evironment name
+
+---
+
+execution steps: 
+-download the jar
+-open command line prompt
+-traverse to the locaion
+-run this command with correct argument
+-java -jar RevisionDeletion.jar userLoginID password api.enterprise.apigee.com vinaysj17-eval test
+ 
+username and password are the authentication details which are required for login into apigee
+
+domain name would be api.enterprise.apigee.com
+
+organization name would be the name of organization 
+
+environment name would be the environment of the proxies deployed. 
+
+---
+
