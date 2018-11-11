@@ -19,9 +19,9 @@ The arguments which needs to be passed to this jar are:
 
 	username 
 	password
+	protocol
 	domain name
 	organization name
-	evironment name
 
 ---
 
@@ -32,7 +32,7 @@ Execution steps:
 -Traverse to the locaion
 -Run this command with correct argument
 
-	$java -jar RevisionDeletion.jar userLoginID password api.enterprise.apigee.com vinaysj17-eval test
+	$java -jar RevisionDeletion.jar userLoginID password https api.enterprise.apigee.com vinaysj17-eval 
  
 Note: there is a space delimiter inbetween arguments being passed. 
 
@@ -42,10 +42,10 @@ Argument description:
 
 Username and password are the authentication details which are required for login into apigee
 
+Protocol would be https or http
+
 Domain name would be api.enterprise.apigee.com for saas, for on prem the domain name would be different. 
 
 Organization name would be the name of organization 
-
-Environment name would be the environment of the proxies deployed. 
 
 ---
