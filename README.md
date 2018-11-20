@@ -10,7 +10,7 @@ Traverse to the location
 
 Run below command with correct argument
 
-          $java -jar RevisionDeletion.jar userLoginID password https domain orgname filepath
+          $java -jar RevisionDeletion_org_ex.jar userLoginID password https domain orgname filepath
 
 Description for the arguments being passed in above command
 
