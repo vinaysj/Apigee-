@@ -1,51 +1,21 @@
-# Apigee-
-Jar file to Delete undeployed revisions in an api proxy
+Execution steps
 
----
-	Deleting the undeployed revisiond in a api proxy; retaining one undeployed revision below the deployed revision. 
----
+Create a text file with the list of environment. The environments specified here would be considered for excluding the proxies which are deployed in these environments. (Text file format: each line should correspond to one environment name. File should only contain environment names)
 
-Overview:
+Download the jar
 
-- This jar can be used to delete all the undeployed revision in an environment. The undeployed revision which is below the deployed revision will be retained. Not all the undeployed revisions will be deleted. 
-- The environment is used to retrieve all the proxy names 
-- Irrespective of which evironment the revisions are delpoyed, this code retains the revision and one undeployed revision below it deleting the rest.  
+Open command line prompt
 
----
+Traverse to the location
 
-Input arguments:
+Run below command with correct argument
 
-The arguments which needs to be passed to this jar are:
+          $java -jar RevisionDeletion.jar userLoginID password https domain orgname filepath
 
-	username 
-	password
-	protocol
-	domain name
-	organization name
+Description for the arguments being passed in above command
 
----
-
-Execution steps: 
-
--Download the jar
--Open command line prompt
--Traverse to the locaion
--Run this command with correct argument
-
-	$java -jar RevisionDeletion.jar userLoginID password https api.enterprise.apigee.com vinaysj17-eval 
- 
-Note: there is a space delimiter inbetween arguments being passed. 
-
----
-
-Argument description: 
-
-Username and password are the authentication details which are required for login into apigee
-
-Protocol would be https or http
-
-Domain name would be api.enterprise.apigee.com for saas, for on prem the domain name would be different. 
-
-Organization name would be the name of organization 
-
----
+    Username and password are the authentication details which are required for login into apigee
+    Protocol would be https or http
+    Domain name would be api.enterprise.apigee.com for saas and devapgw807.unix.gsm1900.org for on prem
+    Organization name would be the name of organization
+    Filepath is the path of the file which contains the list of environments for which the proxies deployed in this environment revision deletion will not be done.
